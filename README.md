@@ -2,7 +2,7 @@
   <img src="https://telegra.ph/file/c4802924ea9db7036ec58.jpg" alt="jishu developer Logo">
 </p>
 <h1 align="center">
-  <b> Lazy Princess BOT </b>
+  <b> JISSHU BABA BOT </b>
 </h1>
 
 ## ⚡️Features
