@@ -335,7 +335,7 @@ async def next_page(bot, query):
 
     btn.insert(0,
         [ 
-	    InlineKeyboardButton(text="⚡ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ⚡", url='https://telegram.me/LazyDeveloper')
+	    InlineKeyboardButton(text="⚡ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ⚡", url='https://telegram.me/Jishubabu')
         ] 
     )
 
@@ -414,20 +414,20 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     title = chat.title
                 except:
                     await query.message.edit_text("Make sure I'm present in your group!!", quote=True)
-                    return await query.answer('♥️ Love @LazyDeveloper ♥️')
+                    return await query.answer('♥️ Love @ᴊɪꜱʜᴜ ɢʜᴏꜱʜ ♥️')
             else:
                 await query.message.edit_text(
                     "I'm not connected to any groups!\nCheck /connections or connect to any groups",
                     quote=True
                 )
-                return await query.answer('♥️ Thank You LazyDeveloper ♥️')
+                return await query.answer('♥️ Thank You ᴊɪꜱʜᴜ ɢʜᴏꜱʜ ♥️')
 
         elif chat_type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
             grp_id = query.message.chat.id
             title = query.message.chat.title
 
         else:
-            return await query.answer('♥️ Thank You LazyDeveloper ♥️')
+            return await query.answer('♥️ Thank You ᴊɪꜱʜᴜ ɢʜᴏꜱʜ ♥️')
 
         st = await client.get_chat_member(grp_id, userid)
         if (st.status == enums.ChatMemberStatus.OWNER) or (str(userid) in ADMINS):
@@ -452,7 +452,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 except:
                     pass
             else:
-                await query.answer("That's not for you sona!", show_alert=True)
+                await query.answer("𝙏𝙝𝙖𝙩'𝙨 𝙉𝙤𝙩 𝙁𝙤𝙧 𝙔𝙤𝙪 𝙎𝙤𝙣𝙖!", show_alert=True)
     elif "groupcb" in query.data:
         await query.answer()
 
@@ -481,7 +481,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=keyboard,
             parse_mode=enums.ParseMode.MARKDOWN
         )
-        return await query.answer('♥️ Thank You LazyDeveloper ♥️')
+        return await query.answer('♥️ Thank You ᴊɪꜱʜᴜ ɢʜᴏꜱʜ ♥️')
     elif "connectcb" in query.data:
         await query.answer()
 
@@ -502,7 +502,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             )
         else:
             await query.message.edit_text('Some error occurred!!', parse_mode=enums.ParseMode.MARKDOWN)
-        return await query.answer('♥️ Thank You LazyDeveloper ♥️')
+        return await query.answer('♥️ Thank You ᴊɪꜱʜᴜ ɢʜᴏꜱʜ ♥️')
     elif "disconnect" in query.data:
         await query.answer()
 
@@ -525,7 +525,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 f"Some error occurred!!",
                 parse_mode=enums.ParseMode.MARKDOWN
             )
-        return await query.answer('♥️ Thank You LazyDeveloper ♥️')
+        return await query.answer('♥️ Thank You ᴊɪꜱʜᴜ ɢʜᴏꜱʜ ♥️')
     elif "deletecb" in query.data:
         await query.answer()
 
@@ -543,7 +543,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 f"Some error occurred!!",
                 parse_mode=enums.ParseMode.MARKDOWN
             )
-        return await query.answer('♥️ Thank You LazyDeveloper ♥️')
+        return await query.answer('♥️ Thank You ᴊɪꜱʜᴜ ɢʜᴏꜱʜ ♥️')
     elif query.data == "backcb":
         await query.answer()
 
@@ -554,7 +554,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             await query.message.edit_text(
                 "There are no active connections!! Connect to some groups first.",
             )
-            return await query.answer('♥️ Thank You LazyDeveloper ♥️')
+            return await query.answer('♥️ Thank You ᴊɪꜱʜᴜ ɢʜᴏꜱʜ ♥️')
         buttons = []
         for groupid in groupids:
             try:
@@ -671,15 +671,15 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer()
     elif query.data == "start":
         buttons = [[
-            InlineKeyboardButton('➕↖️ Add Me To Your Groups ↗️➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            InlineKeyboardButton('➕↖️ 𝘼𝘿𝘿 𝙈𝙀 𝙏𝙊 𝙔𝙊𝙐𝙍 𝙂𝙍𝙊𝙐𝙋𝙎 ↗️➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
         ], [
-            InlineKeyboardButton('🧞‍♀️ Search 🧐', switch_inline_query_current_chat=''),
-            InlineKeyboardButton('🔔 Updates 🤖', url='https://t.me/LazyDeveloper')
+            InlineKeyboardButton('𝙎𝙀𝘼𝙍𝘾𝙃', switch_inline_query_current_chat=''),
+            InlineKeyboardButton('𝙐𝙋𝘿𝘼𝙏𝙀 𝘾𝙃𝘼𝙉𝙉𝙀𝙇', url='https://t.me/bot_Update_jishu')
         ], [
-            InlineKeyboardButton('🙆🏻 Help 🦾', callback_data='help'),
-            InlineKeyboardButton('♥️ About ♥️', callback_data='about')
+            InlineKeyboardButton('𝙃𝙀𝙇𝙋', callback_data='help'),
+            InlineKeyboardButton('𝘼𝘽𝙊𝙐𝙏', callback_data='about')
         ],[
-            InlineKeyboardButton('Watch Tutorial', url='https://youtube.com/LazyDeveloper')
+            InlineKeyboardButton('𝙈𝙊𝙑𝙄𝙀 𝙂𝙍𝙊𝙐𝙋', url='https://t.me/Full_Entertainment_Group')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -687,7 +687,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
-        await query.answer('♥️ Thank You LazyDeveloper ♥️')
+        await query.answer('♥️ Thank You ᴊɪꜱʜᴜ ɢʜᴏꜱʜ ♥️')
     elif query.data == "help":
         buttons = [[
             InlineKeyboardButton('Manual Filter', callback_data='manuelfilter'),
@@ -707,11 +707,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "about":
         buttons = [[
-            InlineKeyboardButton('🔔 Updates 🤖', url='https://t.me/LazyDeveloper'),
-            InlineKeyboardButton('♥️ Source', callback_data='source')
+            InlineKeyboardButton('𝙐𝙋𝘿𝘼𝙏𝙀 𝘾𝙃𝘼𝙉𝙉𝙀𝙇', url='https://t.me/LazyDeveloper'),
+            InlineKeyboardButton('𝙎𝙊𝙐𝙍𝘾𝙀', callback_data='source')
         ], [
-            InlineKeyboardButton('🏠 Home', callback_data='start'),
-            InlineKeyboardButton('🔐 Close', callback_data='close_data')
+            InlineKeyboardButton('𝙃𝙊𝙈𝙀', callback_data='start'),
+            InlineKeyboardButton('𝘾𝙇𝙊𝙎𝙀', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -805,11 +805,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
         # Send message to user
         try:
             btn = [[
-                InlineKeyboardButton(text=f"🔍 Search Here 🔎", url=f"https://telegram.me/{MOVIE_GROUP_USERNAME}")
+                InlineKeyboardButton(text=f"🔍 𝙎𝙚𝙖𝙧𝙘𝙝 𝙃𝙚𝙧𝙚 🔎", url=f"https://telegram.me/{MOVIE_GROUP_USERNAME}")
             ],[
-                InlineKeyboardButton(text=f"🐞 REPORT BUG 🐞", url=f"https://telegram.me/LazyDeveloperSupport")
+                InlineKeyboardButton(text=f"🐞 𝙍𝙚𝙥𝙤𝙧𝙩 𝘽𝙪𝙜 🐞", url=f"https://telegram.me/Jishubabu")
             ],[
-                InlineKeyboardButton(text=f"⚡️ Learn Bot Making 🦋", url=f"https://youtube.com/@LazyDeveloperr")
+                InlineKeyboardButton(text=f"🎦 𝙍𝙚𝙦𝙪𝙚𝙨𝙩 𝘼𝙣𝙮 𝙈𝙤𝙫𝙞𝙚 🎦", url=f"https://t.me/MOVIES_REQUEST_NOW_2_0")
 
             ]]
             btn_lzdv = [
@@ -833,11 +833,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
         # Send message to user
         try:
             btn = [[
-                InlineKeyboardButton(text=f"🔍 Search Here 🔎", url=f"https://telegram.me/{MOVIE_GROUP_USERNAME}")
+                InlineKeyboardButton(text=f"🔍 𝙎𝙚𝙖𝙧𝙘𝙝 𝙃𝙚𝙧𝙚 🔎", url=f"https://telegram.me/{MOVIE_GROUP_USERNAME}")
             ],[
-                InlineKeyboardButton(text=f"🐞 REPORT BUG 🐞", url=f"https://telegram.me/LazyDeveloperSupport")
+                InlineKeyboardButton(text=f"🐞 𝙍𝙚𝙥𝙤𝙧𝙩 𝘽𝙪𝙜 🐞", url=f"https://telegram.me/Jishubabu")
             ],[
-                InlineKeyboardButton(text=f"⚡️ Learn Bot Making 🦋", url=f"https://youtube.com/@LazyDeveloperr")
+                InlineKeyboardButton(text=f"🎦 𝙍𝙚𝙦𝙪𝙚𝙨𝙩 𝘼𝙣𝙮 𝙈𝙤𝙫𝙞𝙚 🎦", url=f"https://t.me/MOVIES_REQUEST_NOW_2_0")
             ]]
             btn_lzdv = [
                 [
@@ -860,11 +860,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
         # Send message to user
         try:
             btn = [[
-                InlineKeyboardButton(text=f"🔍 Search Here 🔎", url=f"https://telegram.me/{MOVIE_GROUP_USERNAME}")
+                InlineKeyboardButton(text=f"🔍 𝙎𝙚𝙖𝙧𝙘𝙝 𝙃𝙚𝙧𝙚 🔎", url=f"https://telegram.me/{MOVIE_GROUP_USERNAME}")
             ],[
-                InlineKeyboardButton(text=f"🐞 REPORT BUG 🐞", url=f"https://telegram.me/LazyDeveloperSupport")
+                InlineKeyboardButton(text=f"🐞 𝙍𝙚𝙥𝙤𝙧𝙩 𝘽𝙪𝙜 🐞", url=f"https://telegram.me/Jishubabu")
             ],[
-                InlineKeyboardButton(text=f"⚡️ Learn Bot Making 🦋", url=f"https://youtube.com/@LazyDeveloperr")
+                InlineKeyboardButton(text=f"🎦 𝙍𝙚𝙦𝙪𝙚𝙨𝙩 𝘼𝙣𝙮 𝙈𝙤𝙫𝙞𝙚 🎦", url=f"https://t.me/MOVIES_REQUEST_NOW_2_0")
 
             ]]
             btn_lzdv = [
@@ -888,11 +888,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
         # Send message to user
         try:
             btn = [[
-                InlineKeyboardButton(text=f"🔍 Search Here 🔎", url=f"https://telegram.me/{MOVIE_GROUP_USERNAME}")
+                InlineKeyboardButton(text=f"🔍 𝙎𝙚𝙖𝙧𝙘𝙝 𝙃𝙚𝙧𝙚 🔎", url=f"https://telegram.me/{MOVIE_GROUP_USERNAME}")
             ],[
-                InlineKeyboardButton(text=f"🐞 REPORT BUG 🐞", url=f"https://telegram.me/LazyDeveloperSupport")
+                InlineKeyboardButton(text=f"🐞 𝙍𝙚𝙥𝙤𝙧𝙩 𝘽𝙪𝙜 🐞", url=f"https://telegram.me/Jishubabu")
             ],[
-                InlineKeyboardButton(text=f"⚡️ Learn Bot Making 🦋", url=f"https://youtube.com/@LazyDeveloperr")
+                InlineKeyboardButton(text=f"🎦 𝙍𝙚𝙦𝙪𝙚𝙨𝙩 𝘼𝙣𝙮 𝙈𝙤𝙫𝙞𝙚 🎦", url=f"https://t.me/MOVIES_REQUEST_NOW_2_0")
             ]]
             btn_lzdv = [
                 [
@@ -915,11 +915,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
         # Send message to user
         try:
             btn = [[
-                InlineKeyboardButton(text=f"🔍 Search Here 🔎", url=f"https://telegram.me/{MOVIE_GROUP_USERNAME}")
+                InlineKeyboardButton(text=f"🔍 𝙎𝙚𝙖𝙧𝙘𝙝 𝙃𝙚𝙧𝙚 🔎", url=f"https://telegram.me/{MOVIE_GROUP_USERNAME}")
             ],[
-                InlineKeyboardButton(text=f"🐞 REPORT BUG 🐞", url=f"https://telegram.me/LazyDeveloperSupport")
+                InlineKeyboardButton(text=f"🐞 𝙍𝙚𝙥𝙤𝙧𝙩 𝘽𝙪𝙜 🐞", url=f"https://telegram.me/Jishubabu")
             ],[
-                InlineKeyboardButton(text=f"⚡️ Learn Bot Making 🦋", url=f"https://youtube.com/@LazyDeveloperr")
+                InlineKeyboardButton(text=f"🎦 𝙍𝙚𝙦𝙪𝙚𝙨𝙩 𝘼𝙣𝙮 𝙈𝙤𝙫𝙞𝙚 🎦", url=f"https://t.me/MOVIES_REQUEST_NOW_2_0")
 
             ]]
             btn_lzdv = [
@@ -943,11 +943,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
         # Send message to user
         try:
             btn = [[
-                InlineKeyboardButton(text=f"🔍 Search Here 🔎", url=f"https://telegram.me/{MOVIE_GROUP_USERNAME}")
+                InlineKeyboardButton(text=f"🔍 𝙎𝙚𝙖𝙧𝙘𝙝 𝙃𝙚𝙧𝙚 🔎", url=f"https://telegram.me/{MOVIE_GROUP_USERNAME}")
             ],[
-                InlineKeyboardButton(text=f"🐞 REPORT BUG 🐞", url=f"https://telegram.me/LazyDeveloperSupport")
+                InlineKeyboardButton(text=f"🐞 𝙍𝙚𝙥𝙤𝙧𝙩 𝘽𝙪𝙜  🐞", url=f"https://telegram.me/Jishubabu")
             ],[
-                InlineKeyboardButton(text=f"⚡️ Learn Bot Making 🦋", url=f"https://youtube.com/@LazyDeveloperr")
+                InlineKeyboardButton(text=f"🎦 𝙍𝙚𝙦𝙪𝙚𝙨𝙩 𝘼𝙣𝙮 𝙈𝙤𝙫𝙞𝙚 🎦", url=f"https://t.me/MOVIES_REQUEST_NOW_2_0")
             ]]
             btn_lzdv = [
                 [
@@ -970,11 +970,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
         # Send message to user
         try:
             btn = [[
-                InlineKeyboardButton(text=f"💛 Request More 💛", url=f"https://telegram.me/{MOVIE_GROUP_USERNAME}")
+                InlineKeyboardButton(text=f"🔎 𝙎𝙚𝙖𝙧𝙘𝙝 𝙃𝙚𝙧𝙚 🔎", url=f"https://telegram.me/{MOVIE_GROUP_USERNAME}")
             ],[
-                InlineKeyboardButton(text=f"🐞 REPORT BUG 🐞", url=f"https://telegram.me/LazyDeveloperSupport")
+                InlineKeyboardButton(text=f"🐞 𝙍𝙚𝙥𝙤𝙧𝙩 𝘽𝙪𝙜 🐞", url=f"https://telegram.me/Jishubabu")
             ],[
-                InlineKeyboardButton(text=f"⚡️ Learn Bot Making 🦋", url=f"https://youtube.com/@LazyDeveloperr")
+                InlineKeyboardButton(text=f"🎦 𝙍𝙚𝙦𝙪𝙚𝙨𝙩 𝘼𝙣𝙮 𝙈𝙤𝙫𝙞𝙚 🎦", url=f"https://t.me/MOVIES_REQUEST_NOW_2_0")
 
             ]]
             btn_lzdv = [
@@ -1197,7 +1197,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
         if str(grp_id) != str(grpid):
             await query.message.edit("Your Active Connection Has Been Changed. Go To /settings.")
-            return await query.answer('♥️ Thank You LazyDeveloper ♥️')
+            return await query.answer('♥️ Thank You ᴊɪꜱʜᴜ ɢʜᴏꜱʜ ♥️')
 
         if status == "True":
             await save_group_settings(grpid, set_type, False)
@@ -1281,7 +1281,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             ]
             reply_markup = InlineKeyboardMarkup(buttons)
             await query.message.edit_reply_markup(reply_markup)
-    await query.answer('♥️ Thank You LazyDeveloper ♥️')
+    await query.answer('♥️ Thank You ᴊɪꜱʜᴜ ɢʜᴏꜱʜ ♥️')
 
 async def auto_filter(client, msg, spoll=False):
     if not spoll:
@@ -1467,7 +1467,7 @@ async def auto_filter(client, msg, spoll=False):
 
     btn.insert(0,
         [ 
-	    InlineKeyboardButton(text="⚡ʜᴏᴡ to ᴅᴏᴡɴʟᴏᴀᴅ⚡", url='https://telegram.me/LazyDeveloper'),
+	    InlineKeyboardButton(text="⚡ʜᴏᴡ to ᴅᴏᴡɴʟᴏᴀᴅ⚡", url='https://telegram.me/Jishubabu'),
         ] 
     )
     if offset != "":
@@ -1531,7 +1531,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"⚡Baby, Here is what i found for your query {search}"
+        cap = f"⚡𝘽𝙖𝙗𝙮,𝙃𝙚𝙧𝙚 𝙄𝙨 𝙒𝙝𝙖𝙩 𝙄 𝙁𝙤𝙪𝙣𝙙 𝙁𝙤𝙧 𝙔𝙤𝙪𝙧 𝙌𝙪𝙚𝙧𝙮 {search}"
     if imdb and imdb.get('poster'):
         try:
             z = await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],
@@ -1574,7 +1574,7 @@ async def advantage_spell_chok(msg):
     g_s += await search_gagala(msg.text)
     gs_parsed = []
     if not g_s:
-        k = await msg.reply("I couldn't find any movie in that name.")
+        k = await msg.reply("𝙄 𝘾𝙤𝙪𝙡𝙙𝙣'𝙩 𝙁𝙞𝙣𝙙 𝘼𝙣𝙮 𝙈𝙤𝙫𝙞𝙚 𝙞𝙣 𝙏𝙝𝙖𝙩 𝙉𝙖𝙢𝙚.")
         await asyncio.sleep(10)
         await k.delete()
         return
@@ -1603,7 +1603,7 @@ async def advantage_spell_chok(msg):
     movielist += [(re.sub(r'(\-|\(|\)|_)', '', i, flags=re.IGNORECASE)).strip() for i in gs_parsed]
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
-        k = await msg.reply("Hey Sona! The requested content is currently unavailable in our database, have some patience 🙂 - our great admin will upload it as soon as possible \n\n               **or**\n\nDiscuss issue with admin here 👉  <a href='https://t.me/Discusss_Here'>Discuss Here</a> ♥️ ")
+        k = await msg.reply("𝑯𝒆𝒚 𝑺𝒐𝒏𝒂 ! 𝑻𝒉𝒆 𝒓𝒆𝒒𝒖𝒆𝒔𝒕𝒆𝒅 𝒄𝒐𝒏𝒕𝒂𝒄𝒕 𝒊𝒔 𝒄𝒖𝒓𝒓𝒆𝒏𝒕𝒍𝒚 𝒖𝒏𝒂𝒗𝒂𝒊𝒍𝒂𝒃𝒍𝒆 𝒊𝒏 𝒐𝒖𝒓 𝑫𝒂𝒕𝒂𝒃𝒂𝒔𝒆, 𝒉𝒂𝒗𝒆 𝒔𝒐𝒎𝒆 𝒑𝒂𝒕𝒊𝒆𝒏𝒄𝒆 🙃 -𝒐𝒖𝒓 𝑮𝒓𝒆𝒂𝒕 𝑨𝒅𝒎𝒊𝒏 𝒘𝒊𝒍 𝒖𝒑𝒍𝒐𝒂𝒅 𝒊𝒕 𝒂𝒔 𝒔𝒐𝒐𝒏 𝒂𝒔 𝒑𝒐𝒔𝒔𝒊𝒃𝒍𝒆 \n\n        **or**\n\n𝘿𝙞𝙨𝙘𝙪𝙨𝙨 𝙄𝙨𝙨𝙪𝙚 𝙒𝙞𝙩𝙝 𝘼𝙙𝙢𝙞𝙣 𝙃𝙚𝙧𝙚 👉  <a href='https://t.me/Jishubabu'>𝗗𝗜𝗦𝗖𝗨𝗦𝗦 𝗛𝗘𝗥𝗘</a> ♥️ ")
         await asyncio.sleep(10)
         await k.delete()
         return
@@ -1615,7 +1615,7 @@ async def advantage_spell_chok(msg):
         )
     ] for k, movie in enumerate(movielist)]
     btn.append([InlineKeyboardButton(text="Close", callback_data=f'spolling#{user}#close_spellcheck')])
-    await msg.reply("Hey sona, did you checked your spelling properly, here are some suggestions for you, please check if your requested content match anyone of these following suggestions...\n\n                 **or**\n\nDiscuss issue with admin here 👉 <a href='https://t.me/Discusss_Here'>Discuss Here</a> ♥️ ",
+    await msg.reply("𝗛𝗲𝘆 𝗦𝗼𝗻𝗮, 𝗱𝗶𝗱 𝘆𝗼𝘂 𝗰𝗵𝗲𝗰𝗸𝗲𝗱 𝘆𝗼𝘂𝗿 𝘀𝗽𝗲𝗹𝗹𝗶𝗻𝗴, 𝗵𝗲𝗿𝗲 𝗮𝗿𝗲 𝘀𝗼𝗺𝗲 𝘀𝘂𝗴𝗴𝗲𝘀𝘁𝗶𝗼𝗻𝘀 𝗳𝗼𝗿 𝘆𝗼𝘂 , 𝗽𝗹𝗲𝗮𝘀𝗲 𝗰𝗵𝗲𝗰𝗸 𝗶𝗳 𝘆𝗼𝘂𝗿 𝗿𝗲𝗾𝘂𝗲𝘀𝘁𝗲𝗱 𝗰𝗼𝗻𝘁𝗲𝗻𝘁 𝗺𝗮𝘁𝗰𝗵 𝗮𝗻𝘆𝗼𝗻𝗲 𝗼𝗳 𝘁𝗵𝗲𝘀𝗲 𝗳𝗼𝗹𝗹𝗼𝘄𝗶𝗻𝗴 𝘀𝘂𝗴𝗴𝗲𝘀𝘁𝗶𝗼𝗻𝘀 ...\n\n        **or**\n\n𝘿𝙞𝙨𝙘𝙪𝙨𝙨 𝙄𝙨𝙨𝙪𝙚 𝙒𝙞𝙩𝙝 𝘼𝙙𝙢𝙞𝙣 𝙃𝙚𝙧𝙚 👉 <a href='https://t.me/Jishubabu'>𝗗𝗜𝗦𝗖𝗨𝗦𝗦 𝗛𝗘𝗥𝗘</a> ♥️ ",
                     reply_markup=InlineKeyboardMarkup(btn))
 
 
