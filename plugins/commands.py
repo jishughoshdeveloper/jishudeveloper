@@ -23,12 +23,12 @@ async def start(client, message):
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         buttons = [
             [
-                InlineKeyboardButton('🔔 Updates 🤖', url='https://t.me/LazyDeveloper')
+                InlineKeyboardButton('𝙐𝙋𝘿𝘼𝙏𝙀 𝘾𝙃𝘼𝙉𝙉𝙀𝙇', url='https://t.me/bot_Update_jishu')
             ],
             [
-                InlineKeyboardButton('🙆🏻 Help 🦾', url=f"https://t.me/{temp.U_NAME}?start=help"),
+                InlineKeyboardButton('𝙃𝙀𝙇𝙋', url=f"https://t.me/{temp.U_NAME}?start=help"),
             ],[
-            InlineKeyboardButton('Watch Tutorial', url='https://youtube.com/LazyDeveloper')
+            InlineKeyboardButton('𝙈𝙊𝙑𝙄𝙀 𝙂𝙍𝙊𝙐𝙋', url='https://t.me/Full_Entertainment_Group')
             ],
             [
                 InlineKeyboardButton(text=DOWNLOAD_TEXT_NAME,url=DOWNLOAD_TEXT_URL)
@@ -47,15 +47,15 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [[
-            InlineKeyboardButton('➕↖️ Add Me To Your Groups ↗️➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            InlineKeyboardButton('➕↖️ 𝘼𝘿𝘿 𝙈𝙀 𝙏𝙊 𝙔𝙊𝙐𝙍 𝙂𝙍𝙊𝙐𝙋𝙎 ↗️➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('🧞‍♀️ Search 🧐', switch_inline_query_current_chat=''),
-            InlineKeyboardButton('🔔 Updates 🤖', url='https://t.me/LazyDeveloper')
+            InlineKeyboardButton('𝙎𝙀𝘼𝙍𝘾𝙃', switch_inline_query_current_chat=''),
+            InlineKeyboardButton('𝙐𝙋𝘿𝘼𝙏𝙀 𝘾𝙃𝘼𝙉𝙉𝙀𝙇', url='https://t.me/bot_Update_jishu')
             ],[
-            InlineKeyboardButton('🙆🏻 Help 🦾', callback_data='help'),
-            InlineKeyboardButton('♥️ About ♥️', callback_data='about')
+            InlineKeyboardButton('𝙃𝙀𝙇𝙋', callback_data='help'),
+            InlineKeyboardButton('𝘼𝘽𝙊𝙐𝙏', callback_data='about')
             ],[
-            InlineKeyboardButton('Watch Tutorial', url='https://youtube.com/LazyDeveloper')
+            InlineKeyboardButton('𝙈𝙊𝙑𝙄𝙀 𝙂𝙍𝙊𝙐𝙋', url='https://t.me/Full_Entertainment_Group')
             ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -74,12 +74,12 @@ async def start(client, message):
         btn = [
             [
                 InlineKeyboardButton(
-                    "🤖 Join Updates Channel", url=invite_link.invite_link
+                    "𝙅𝙤𝙞𝙣 '𝙈𝙊𝙑𝙄𝙀 𝙃𝙐' 𝘾𝙝𝙖𝙣𝙣𝙚𝙡 𝙁𝙤𝙧 𝙐𝙨𝙞𝙣𝙜 𝙩𝙝𝙞𝙨 𝘽𝙤𝙩", url=invite_link.invite_link
                 )
             ],
              [
                 InlineKeyboardButton(
-                    "🦋 SUBSCRIBE YT Channel 🦋", url='https://youtube.com/@LazyDeveloperr'
+                    "𝙅𝙤𝙞𝙣 '𝙎𝙐𝙉𝘿𝘼𝙔 𝙎𝙐𝙎𝙋𝙀𝙉𝙎𝙀' 𝘾𝙝𝙖𝙣𝙣𝙚𝙡 𝙁𝙤𝙧 𝙐𝙨𝙞𝙣𝙜 𝙩𝙝𝙞𝙨 𝘽𝙤𝙩", url='https://youtube.com/@LazyDeveloperr'
                 )
             ]
         ]
@@ -100,15 +100,15 @@ async def start(client, message):
         return
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
-            InlineKeyboardButton('➕↖️ Add Me To Your Groups ↗️➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            InlineKeyboardButton('➕↖️ 𝘼𝘿𝘿 𝙈𝙀 𝙏𝙊 𝙔𝙊𝙐𝙍 𝙂𝙍𝙊𝙐𝙋𝙎 ↗️➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('🧞‍♀️ Search 🧐', switch_inline_query_current_chat=''),
-            InlineKeyboardButton('🔔 Updates 🤖', url='https://t.me/LazyDeveloper')
+            InlineKeyboardButton('𝙎𝙀𝘼𝙍𝘾𝙃', switch_inline_query_current_chat=''),
+            InlineKeyboardButton('𝙐𝙋𝘿𝘼𝙏𝙀 𝘾𝙃𝘼𝙉𝙉𝙀𝙇', url='https://t.me/bot_Update_jishu')
             ],[
-            InlineKeyboardButton('🙆🏻 Help 🦾', callback_data='help'),
-            InlineKeyboardButton('♥️ About ♥️', callback_data='about')
+            InlineKeyboardButton('𝙃𝙀𝙇𝙋', callback_data='help'),
+            InlineKeyboardButton('𝘼𝘽𝙊𝙐𝙏', callback_data='about')
         ],[
-            InlineKeyboardButton('Watch Tutorial', url='https://youtube.com/LazyDeveloper')
+            InlineKeyboardButton('𝙈𝙊𝙑𝙄𝙀 𝙂𝙍𝙊𝙐𝙋', url='https://t.me/Full_Entertainment_Group')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
